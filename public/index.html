@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StyleHub — Clothing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">STYLEHUB <span class="dot"></span></div>
+      <nav class="main-nav">
+        <a href="#home" data-target="home">Home</a>
+        <a href="#store" data-target="store">Store</a>
+        <a href="#about" data-target="about">About</a>
+        <a href="#contact" data-target="contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button id="openCart" aria-label="Open cart">👜 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-inner wrap">
+        <h1 class="fade-up">New Season, New Style</h1>
+        <p class="fade-up delay-1">Fresh drops — handcrafted for comfort and attitude.</p>
+        <div class="cta fade-up delay-2">
+          <button id="heroShop">Shop T-Shirts</button>
+          <a href="#about" class="ghost">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORE -->
+    <section id="store" class="wrap section">
+      <div class="section-head">
+        <h2>T-shirts & Essentials</h2>
+        <div class="tools">
+          <input id="search" placeholder="Search products…">
+          <select id="sort">
+            <option value="recommend">We recommend</option>
+            <option value="newest">Newest</option>
+            <option value="priceLow">Price: Low → High</option>
+            <option value="priceHigh">Price: High → Low</option>
+            <option value="nameAZ">Name A → Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="wrap section about">
+      <h2>About StyleHub</h2>
+      <p>StyleHub blends comfort with subtle statements — ethically-sourced fabrics, simple silhouettes and bold heart. This demo project showcases modern frontend patterns you'd use in a real shop.</p>
+      <div class="features">
+        <div class="feature">
+          <strong>Quality</strong>
+          <p>Premium cotton feels like a hug. Also long-lasting.</p>
+        </div>
+        <div class="feature">
+          <strong>Design</strong>
+          <p>Minimal, readable & responsive — looks good on any screen.</p>
+        </div>
+        <div class="feature">
+          <strong>Delivery</strong>
+          <p>Demo checkout only — no payments here. Just flex it for class.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap section contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" class="contact-form" autocomplete="off">
+        <div class="row">
+          <input id="cname" name="name" placeholder="Your Name" />
+          <input id="cemail" name="email" placeholder="Your Email" />
+        </div>
+        <textarea id="cmessage" name="message" rows="5" placeholder="Message"></textarea>
+        <div class="row actions-row">
+          <button type="submit" class="primary">Send Message</button>
+          <button type="button" id="contactSave" class="ghost">Save Draft</button>
+        </div>
+        <p class="muted" id="contactStatus"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- CART DRAWER -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <header>
+      <strong>Shopping Bag</strong>
+      <button id="closeCart">Close</button>
+    </header>
+    <div id="cartList" class="cart-list"></div>
+    <footer>
+      <div class="row between">
+        <span class="muted">Subtotal</span>
+        <strong id="subtotal">Rs 0</strong>
+      </div>
+      <button id="checkout" class="primary">Checkout (demo)</button>
+      <p class="muted tiny">Demo project — no real payments.</p>
+    </footer>
+  </aside>
+
+  <!-- PRODUCT MODAL -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">✕</button>
+      <div class="modal-media"><img id="modalImg" src="" alt=""></div>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalTag" class="muted"></p>
+        <div class="price-row">
+          <div id="modalPrice" class="price"></div>
+          <div id="modalCompare" class="compare muted"></div>
+        </div>
+        <div class="selectors">
+          <div id="sizeWrap"></div>
+          <div id="colorWrap"></div>
+        </div>
+        <div class="modal-actions">
+          <button id="modalAdd" class="primary">Add to Bag</button>
+          <button id="modalClose" class="ghost">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>© 2025 StyleHub — student project</div>
+      <div class="muted">Built with ❤️ for ICT final.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

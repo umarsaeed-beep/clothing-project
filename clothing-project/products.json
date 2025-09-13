@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Casual Shirt", "price": 25, "image": "https://via.placeholder.com/300x200?text=Shirt" },
+  { "id": 2, "name": "Blue Jeans", "price": 40, "image": "https://via.placeholder.com/300x200?text=Jeans" },
+  { "id": 3, "name": "Sport Shoes", "price": 60, "image": "https://via.placeholder.com/300x200?text=Shoes" },
+  { "id": 4, "name": "Cozy Hoodie", "price": 35, "image": "https://via.placeholder.com/300x200?text=Hoodie" },
+  { "id": 5, "name": "Denim Jacket", "price": 50, "image": "https://via.placeholder.com/300x200?text=Jacket" },
+  { "id": 6, "name": "Snapback Cap", "price": 15, "image": "https://via.placeholder.com/300x200?text=Cap" }
+]
